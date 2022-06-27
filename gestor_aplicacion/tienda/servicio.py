@@ -18,7 +18,7 @@ class Servicio:
         self._taquillero = _taquillero
         self._reservado = False # reparado antes
         self._costo = 0
-        self._diagnostico = None # la consulta de la reserva
+        self._diagnostico = None # la consulta de si se puede reservar
         self._pagado = False
         if self.servicios is Empty:
             self.identificador = 0
@@ -63,6 +63,17 @@ class Servicio:
 
     def setDiagnostico(self, diagnostico):
         self._diagnostico = diagnostico
+
+    def getSupervisor(self):
+        return self._supervisor
+
+    def isReservado(self):
+        return self._reservado
+
+    def setReservado(self, reservado):
+        self._reservado = reservado
+        
+    # metodos de clase
         
     @classmethod
     def getServicios(cls):
@@ -72,14 +83,5 @@ class Servicio:
     def setServicios(cls, servicios):
         cls.servicios = servicios
 
-    def getTecnico(self):
-        return self._tecnico
-
-    def isReparado(self):
-        return self._reparado
-
-    def setReparado(self, reparado):
-        self._reparado = reparado
-
     def __str__(self):
-        return "Identificador del servicio: " + str(self.identificador) + "\nCliente: " + str(self._cliente) + "\nProducto asociado: " + str(self._producto)+ "\nReparado: " + str(self._reparado) + "\nPagado: " + str(self._pagado) + "\n"
+        return "Identificador del servicio: " + str(self.identificador) + "\nCliente: " + str(self._cliente) + "\nCine escogido: " + str(self._cine)+ "\nReservado: " + str(self._reservado) + "\nPagado: " + str(self._pagado) + "\n"

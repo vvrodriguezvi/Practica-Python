@@ -1,15 +1,15 @@
 from ..personal.empleado import Empleado
 from ..tienda.servicio import Servicio
-from ..tienda.almacen import Almacen
+from ..tienda.archivo import Archivo
 
-class Tecnico(Empleado):
+class Supervisor(Empleado):
     supervisores = list()
     def __init__(self, nombre, cedula, servicios = None):
             super().__init__(nombre, cedula)
             self.supervisores.append(self)
             
-    # @param servicio
-    # @summary El metodo verificarProblemas es un metodo auxiliar de la clase, el cual recibe un servicio y devuelve una lista con los componentes
+    # El metodo verificarProblemas es un metodo auxiliar de la clase, el cual recibe 
+    # un servicio y devuelve una lista con los componentes
     # averiados en el producto correspondiente a ese servicio
     
     def verificarProblemas(self, servicio):
@@ -25,7 +25,7 @@ class Tecnico(Empleado):
     # con el mismo nombre se encuentra en la Bodega o no.
     
     def buscarComponente(self, componente):
-        return Bodega.sacarComponente(componente.getNombre())
+        return Archivo.sacarPelicula(componente.getNombre())
     
     # @param servicio
     # @summary El metodo diagnosticar recibe como paremetro un servicio y modifica en este su atributo diagostico, brindando informacion 
@@ -45,7 +45,7 @@ class Tecnico(Empleado):
         for componente in averiados:
             remplazo = self.buscarComponente(componente)
             if remplazo != None:
-                componenteBodega = Bodega.sacarComponente(remplazo)
+                componenteBodega = Archivo.sacarPelicula(remplazo)
                 producto.quitarComponente(componente)
                 producto.agregarComponente(componenteBodega)
                 servicio.setCosto(servicio.getCosto()+componenteBodega.getPrecio())
