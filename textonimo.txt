@@ -1,0 +1,9 @@
+CinemaUnal
+
+Empresa que dirige distintos cines de la ciudad de Medellín.
+Se buscó crear una aplicacion que simule las interacciones entre
+el cinema y el cliente, para mejorar la organizacion de los servicios presentados
+por la empresa, que van desde consultar la disponibilidad de un cine para ver una pelicula,
+hasta el cobro de salario de los empleados de la compañía.
+
+

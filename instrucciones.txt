@@ -1,0 +1,39 @@
+Instrucciones
+
+Seguir las instrucciones para utilizar la aplicacion:
+
+1. Creación de un cliente:
+- manualmente: Menu/disponibilidad del cine/crear cliente y diligencia
+ la informacion necesaria.
+- automaticamente: Menu/disponibilidad del cine/Generar cliente.
+
+2. Cuando el cliente ya fue creado, podra solicitar el servicio requerido, Una
+vez ingresa al Menu/disponibilidad del cine/solicitar servicio y debera ingresar
+el id del cliente que solicito el servicio.
+
+3. Una vez ya haya solicitado el servicio, empieza el diagnostico de la 
+disponibilidad del cine, en las opciones: Menu/disponibilidad del cine/ ingresa 
+el id del servicio correspondiente al diagnostico.
+
+4. Ya identificado el cine, se podra verificar la cartelera del cine,
+ingresando el id del servicio en las opciones de verificar.
+
+5. Si desea finalizar el servicio en la app, el supervisor notificara al cliente
+si en el cine fue verificado la pelicula del cliente y entrega un recibo. Se realiza
+desde: finalizar servicio/ ingresar el id del servicio que va a finalizar.
+
+6. Una vez ya se le haya notificado al cliente el costo por el servicio, este se
+dispone a pagar por el, y el taquillero guardara este pago en la caja registradora.
+Para realizar el cobro, soll debe ingresar el id del servicio correspondiente al cobrar
+un servicio.
+
+7. Al final el periodo de liquidacion en el cinema, el administrador puede 
+liquidar el periodo desde la misma aplicacion, para que se le pague su 
+respectivo salario a los empleados desde la caja registradora. Para realizar
+la liquidacion: ventana principal / Menu liquidar.
+
+Extra. Si en medio del proceso no recuerda los id de los servicios y de los 
+clientes, puede ingresar a los datos con los clientes ya creados desde:
+mostrartodos los servicios desde la opcion mostrar servicios o mostrar clientes.
+
+
